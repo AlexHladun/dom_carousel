@@ -2,6 +2,25 @@
 @import "fonts";
 @import "typography";
 
-body {
-  background: $c-gray;
+#container {
+  display: flex;
+  height: 147px;
+  width: $containerSize;
+  overflow: hidden;
+  
+  img {
+    height: 130px;
+    width: 130px;
+  }
+}
+
+section {
+  display: flex;
+  width: $containerSize;
+  justify-content: space-between;
+  
+  button {
+    width: 50px;
+    height: 25px;
+  }
 }
