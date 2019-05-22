@@ -2,7 +2,7 @@
 @import "fonts";
 @import "typography";
 
-#container {
+#container-images {
   display: flex;
   height: 147px;
   width: $containerSize;
@@ -12,6 +12,11 @@
     height: 130px;
     width: 130px;
   }
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 section {

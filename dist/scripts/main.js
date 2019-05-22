@@ -1,11 +1,15 @@
 'use strict';
-const container = document.querySelector('#container');
+const container = document.querySelector('#container-images');
 const buttons = document.querySelector('#buttons');
 const next = document.querySelector('.next');
 const prev = document.querySelector('.prev');
+const size = document.querySelector('#container-images').offsetWidth;
+const imgSize = document.querySelector('img').offsetWidth;
+const imgCount = document.querySelectorAll('img').length
+const maxSize = imgCount * imgSize - size;
+
 
 function carousel(evnt) {
-  const size = 390;
   const target = evnt.target;
   const action = target.getAttribute('data-action');
   switch (action) {
@@ -20,19 +24,15 @@ function carousel(evnt) {
 };
 
 function disBtn() {
-  if (Math.ceil(container.scrollLeft) === 910) {
-    next.disabled = true;
-    next.style.opacity = 0.5;
+  if (Math.ceil(container.scrollLeft) === maxSize) {
+    next.classList.add('disabled');
   } else {
-    next.disabled = false;
-    next.style.opacity = 1;
+    next.classList.remove('disabled');
   };
   if (Math.ceil(container.scrollLeft) === 0) {
-    prev.disabled = true;
-    prev.style.opacity = 0.5;
+    prev.classList.add('disabled');
   } else {
-    prev.disabled = false;
-    prev.style.opacity = 1;
+    prev.classList.remove('disabled');
   }
 };
 
