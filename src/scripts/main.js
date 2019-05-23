@@ -24,7 +24,7 @@ function carousel(evnt) {
 };
 
 function disBtn() {
-  if (Math.ceil(container.scrollLeft) === maxSize) {
+  if (container.scrollLeft === maxSize) {
     next.classList.add('disabled');
   } else {
     next.classList.remove('disabled');
