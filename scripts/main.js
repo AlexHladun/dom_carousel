@@ -1,13 +1,13 @@
 'use strict';
 const container = document.querySelector('#container-images');
 const buttons = document.querySelector('#buttons');
+buttons.addEventListener('click', carousel);
 const next = document.querySelector('.next');
 const prev = document.querySelector('.prev');
 const size = document.querySelector('#container-images').offsetWidth;
 const imgSize = document.querySelector('img').offsetWidth;
-const imgCount = document.querySelectorAll('img').length
+const imgCount = document.querySelectorAll('img').length;
 const maxSize = imgCount * imgSize - size;
-
 
 function carousel(evnt) {
   const target = evnt.target;
@@ -35,5 +35,3 @@ function disBtn() {
     prev.classList.remove('disabled');
   }
 };
-
-buttons.addEventListener('click', carousel);
