@@ -1,6 +1,7 @@
 'use strict';
 const container = document.querySelector('#container-images');
 const buttons = document.querySelector('#buttons');
+buttons.addEventListener('click', carousel);
 const next = document.querySelector('.next');
 const prev = document.querySelector('.prev');
 const size = document.querySelector('#container-images').offsetWidth;
@@ -34,5 +35,3 @@ function disBtn() {
     prev.classList.remove('disabled');
   }
 };
-
-buttons.addEventListener('click', carousel);
