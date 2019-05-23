@@ -29,7 +29,7 @@ function disBtn() {
   } else {
     next.classList.remove('disabled');
   };
-  if (Math.ceil(container.scrollLeft) === 0) {
+  if (container.scrollLeft === 0) {
     prev.classList.add('disabled');
   } else {
     prev.classList.remove('disabled');
